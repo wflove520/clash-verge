@@ -1,0 +1,173 @@
+proxies:
+  # ======= 会员节点（pay） =======
+
+  - name: "🇨🇳台湾01 直连专线（会员）"
+    type: vless
+    server: 60.248.219.54
+    port: 443
+    uuid: 8f7e5553-7ecc-4231-847c-971304033f86
+    tls: true
+    network: ws
+    servername: ty986gfazs.cainiaohub.xyz
+    skip-cert-verify: true
+    ws-opts:
+      path: /81574b6b-c9d7-44a0-b83d-dad56e8cb530
+      headers:
+        Host: ty986gfazs.cainiaohub.xyz
+
+  - name: "🇨🇳台湾02 直连专线（会员）"
+    type: vless
+    server: 60.248.219.54
+    port: 443
+    uuid: 8f7e5553-7ecc-4231-847c-971304033f86
+    tls: true
+    network: ws
+    servername: ty986gfazs.cainiaohub.xyz
+    skip-cert-verify: true
+    ws-opts:
+      path: /81574b6b-c9d7-44a0-b83d-dad56e8cb530
+      headers:
+        Host: ty986gfazs.cainiaohub.xyz
+
+  - name: "🇭🇰香港01 中转专线（会员）"
+    type: vless
+    server: 103.180.20.232
+    port: 8443
+    uuid: 8f7e5553-7ecc-4231-847c-971304033f86
+    tls: true
+    network: ws
+    servername: ty986gfazs.cainiaohub.xyz
+    skip-cert-verify: true
+    ws-opts:
+      path: /81574b6b-c9d7-44a0-b83d-dad56e8cb530
+      headers:
+        Host: ty986gfazs.cainiaohub.xyz
+
+  - name: "🇭🇰香港02 中转专线（会员）"
+    type: vless
+    server: 103.180.20.232
+    port: 8443
+    uuid: 8f7e5553-7ecc-4231-847c-971304033f86
+    tls: true
+    network: ws
+    servername: ty986gfazs.cainiaohub.xyz
+    skip-cert-verify: true
+    ws-opts:
+      path: /81574b6b-c9d7-44a0-b83d-dad56e8cb530
+      headers:
+        Host: ty986gfazs.cainiaohub.xyz
+
+  - name: "🇭🇰香港03 中转专线（会员）"
+    type: vless
+    server: 103.180.20.189
+    port: 8443
+    uuid: 8f7e5553-7ecc-4231-847c-971304033f86
+    tls: true
+    network: ws
+    servername: ty986gfazs.cainiaohub.xyz
+    skip-cert-verify: true
+    ws-opts:
+      path: /81574b6b-c9d7-44a0-b83d-dad56e8cb530
+      headers:
+        Host: ty986gfazs.cainiaohub.xyz
+
+  - name: "🇯🇵日本01 直连专线（会员）"
+    type: vless
+    server: 38.180.201.172
+    port: 8443
+    uuid: 8f7e5553-7ecc-4231-847c-971304033f86
+    tls: true
+    network: ws
+    servername: ty986gfazs.cainiaohub.xyz
+    skip-cert-verify: true
+    ws-opts:
+      path: /81574b6b-c9d7-44a0-b83d-dad56e8cb530
+      headers:
+        Host: ty986gfazs.cainiaohub.xyz
+
+  - name: "🇯🇵日本02 直连专线（会员）"
+    type: vless
+    server: 38.180.201.172
+    port: 8443
+    uuid: 8f7e5553-7ecc-4231-847c-971304033f86
+    tls: true
+    network: ws
+    servername: ty986gfazs.cainiaohub.xyz
+    skip-cert-verify: true
+    ws-opts:
+      path: /81574b6b-c9d7-44a0-b83d-dad56e8cb530
+      headers:
+        Host: ty986gfazs.cainiaohub.xyz
+
+  - name: "🇺🇸美国01 直连专线（会员）"
+    type: vless
+    server: 38.180.193.242
+    port: 30545
+    uuid: 8f7e5553-7ecc-4231-847c-971304033f86
+    tls: true
+    network: ws
+    servername: ty986gfazs.cainiaohub.xyz
+    skip-cert-verify: true
+    ws-opts:
+      path: /81574b6b-c9d7-44a0-b83d-dad56e8cb530
+      headers:
+        Host: ty986gfazs.cainiaohub.xyz
+
+  # ======= 免费节点（free） =======
+
+  - name: "🇯🇵日本01-免费"
+    type: vless
+    server: 38.180.7.127
+    port: 443
+    uuid: 8f7e5553-7ecc-4231-847c-971304033f86
+    tls: true
+    network: ws
+    servername: erfdzxc.ewuernb.uk
+    skip-cert-verify: true
+    ws-opts:
+      path: /81574b6b-c9d7-44a0-b83d-dad56e8cb529
+      headers:
+        Host: erfdzxc.ewuernb.uk
+
+  - name: "🇯🇵日本02-免费"
+    type: vless
+    server: 38.180.7.127
+    port: 443
+    uuid: 8f7e5553-7ecc-4231-847c-971304033f86
+    tls: true
+    network: ws
+    servername: erfdzxc.ewuernb.uk
+    skip-cert-verify: true
+    ws-opts:
+      path: /81574b6b-c9d7-44a0-b83d-dad56e8cb529
+      headers:
+        Host: erfdzxc.ewuernb.uk
+
+proxy-groups:
+  - name: "🚀 会员节点"
+    type: select
+    proxies:
+      - "🇨🇳台湾01 直连专线（会员）"
+      - "🇨🇳台湾02 直连专线（会员）"
+      - "🇭🇰香港01 中转专线（会员）"
+      - "🇭🇰香港02 中转专线（会员）"
+      - "🇭🇰香港03 中转专线（会员）"
+      - "🇯🇵日本01 直连专线（会员）"
+      - "🇯🇵日本02 直连专线（会员）"
+      - "🇺🇸美国01 直连专线（会员）"
+
+  - name: "🎁 免费节点"
+    type: select
+    proxies:
+      - "🇯🇵日本01-免费"
+      - "🇯🇵日本02-免费"
+
+  - name: "🌐 节点选择"
+    type: select
+    proxies:
+      - "🚀 会员节点"
+      - "🎁 免费节点"
+      - "DIRECT"
+
+rules:
+  - MATCH,🌐 节点选择
