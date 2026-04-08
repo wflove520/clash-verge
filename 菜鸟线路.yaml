@@ -1,383 +1,452 @@
-proxies:
-  # ======= 会员节点（pay） =======
+port: 7890
+socks-port: 7891
+allow-lan: true
+mode: rule
+log-level: info
+ipv6: false
 
+proxies:
   - name: "🇨🇳台湾02 超快专线"
     type: vless
     server: 59.125.69.19
     port: 443
     uuid: 10c10faf-375a-4fe8-9403-613641a87c4f
-    tls: true
     network: ws
-    servername: ty986gfazs.cainiaohub.xyz
+    udp: true
+    tls: true
     skip-cert-verify: true
+    client-fingerprint: chrome
+    servername: ty986gfazs.cainiaohub.xyz
     ws-opts:
-      path: /81574b6b-c9d7-44a0-b83d-dad56e8cb530
+      path: '/81574b6b-c9d7-44a0-b83d-dad56e8cb530'
       headers:
-        Host: ty986gfazs.cainiaohub.xyz
+        Host: 'ty986gfazs.cainiaohub.xyz'
+
+  - name: "🇨🇳台湾01|高速|流媒体"
+    type: vless
+    server: 59.125.53.1
+    port: 12315
+    uuid: 94a43d6f-5522-4721-90f8-bcf3e8df3489
+    network: tcp
+    udp: true
+    tls: true
+    skip-cert-verify: true
+    client-fingerprint: chrome
+    servername: 220.130.75.169
+
+  - name: "🇨🇳台湾02|高速|流媒体"
+    type: vless
+    server: 59.125.53.1
+    port: 12316
+    uuid: 94a43d6f-5522-4721-90f8-bcf3e8df3489
+    network: tcp
+    udp: true
+    tls: true
+    skip-cert-verify: true
+    client-fingerprint: chrome
+    servername: 220.130.75.170
+
+  - name: "🇨🇳台湾03|高速|流媒体"
+    type: vless
+    server: 59.125.53.1
+    port: 12317
+    uuid: 94a43d6f-5522-4721-90f8-bcf3e8df3489
+    network: tcp
+    udp: true
+    tls: true
+    skip-cert-verify: true
+    client-fingerprint: chrome
+    servername: 220.130.75.171
 
   - name: "🇨🇳台湾01 直连专线"
     type: vless
     server: 60.248.219.76
     port: 443
     uuid: 10c10faf-375a-4fe8-9403-613641a87c4f
-    tls: true
     network: ws
-    servername: ty986gfazs.cainiaohub.xyz
+    udp: true
+    tls: true
     skip-cert-verify: true
+    client-fingerprint: chrome
+    servername: ty986gfazs.cainiaohub.xyz
     ws-opts:
-      path: /81574b6b-c9d7-44a0-b83d-dad56e8cb530
+      path: '/81574b6b-c9d7-44a0-b83d-dad56e8cb530'
       headers:
-        Host: ty986gfazs.cainiaohub.xyz
+        Host: 'ty986gfazs.cainiaohub.xyz'
 
   - name: "🇭🇰香港01 中转专线"
     type: vless
     server: 103.148.73.119
     port: 8443
     uuid: 10c10faf-375a-4fe8-9403-613641a87c4f
-    tls: true
     network: ws
-    servername: ty986gfazs.cainiaohub.xyz
+    udp: true
+    tls: true
     skip-cert-verify: true
+    client-fingerprint: chrome
+    servername: ty986gfazs.cainiaohub.xyz
     ws-opts:
-      path: /81574b6b-c9d7-44a0-b83d-dad56e8cb530
+      path: '/81574b6b-c9d7-44a0-b83d-dad56e8cb530'
       headers:
-        Host: ty986gfazs.cainiaohub.xyz
+        Host: 'ty986gfazs.cainiaohub.xyz'
 
   - name: "🇭🇰香港02 中转专线"
     type: vless
     server: 103.148.73.119
     port: 8443
     uuid: 10c10faf-375a-4fe8-9403-613641a87c4f
-    tls: true
     network: ws
-    servername: ty986gfazs.cainiaohub.xyz
+    udp: true
+    tls: true
     skip-cert-verify: true
+    client-fingerprint: chrome
+    servername: ty986gfazs.cainiaohub.xyz
     ws-opts:
-      path: /81574b6b-c9d7-44a0-b83d-dad56e8cb530
+      path: '/81574b6b-c9d7-44a0-b83d-dad56e8cb530'
       headers:
-        Host: ty986gfazs.cainiaohub.xyz
+        Host: 'ty986gfazs.cainiaohub.xyz'
 
   - name: "🇭🇰香港03 超快专线"
     type: vless
     server: 207.174.133.130
     port: 8443
     uuid: 10c10faf-375a-4fe8-9403-613641a87c4f
-    tls: true
     network: ws
-    servername: ty986gfazs.cainiaohub.xyz
+    udp: true
+    tls: true
     skip-cert-verify: true
+    client-fingerprint: chrome
+    servername: ty986gfazs.cainiaohub.xyz
     ws-opts:
-      path: /81574b6b-c9d7-44a0-b83d-dad56e8cb530
+      path: '/81574b6b-c9d7-44a0-b83d-dad56e8cb530'
       headers:
-        Host: ty986gfazs.cainiaohub.xyz
+        Host: 'ty986gfazs.cainiaohub.xyz'
+
+  - name: "美国-1"
+    type: vless
+    server: 155.117.87.197
+    port: 10041
+    uuid: EF3507AC-123A-4A39-9B4C-7D9BD69F8913
+    network: grpc
+    udp: true
+    tls: true
+    skip-cert-verify: true
+    client-fingerprint: chrome
+    servername: www.microsoft.com
+    reality-opts:
+      public-key: '4ubRpOGo1d0kaRjvob_x0t271IL1P6al2gM5slqf_Fc'
+      short-id: '686c0ef0'
+    grpc-opts:
+      grpc-service-name: 'update'
+
+  - name: "美国-2"
+    type: vless
+    server: 154.3.59.46
+    port: 10042
+    uuid: EF3507AC-123A-4A39-9B4C-7D9BD69F8913
+    network: grpc
+    udp: true
+    tls: true
+    skip-cert-verify: true
+    client-fingerprint: chrome
+    servername: www.microsoft.com
+    reality-opts:
+      public-key: '4ubRpOGo1d0kaRjvob_x0t271IL1P6al2gM5slqf_Fc'
+      short-id: '686c0ef0'
+    grpc-opts:
+      grpc-service-name: 'update'
+
+  - name: "美国-3"
+    type: vless
+    server: 154.3.59.94
+    port: 10042
+    uuid: EF3507AC-123A-4A39-9B4C-7D9BD69F8913
+    network: grpc
+    udp: true
+    tls: true
+    skip-cert-verify: true
+    client-fingerprint: chrome
+    servername: www.microsoft.com
+    reality-opts:
+      public-key: '4ubRpOGo1d0kaRjvob_x0t271IL1P6al2gM5slqf_Fc'
+      short-id: '686c0ef0'
+    grpc-opts:
+      grpc-service-name: 'update'
+
+  - name: "日本-1"
+    type: vless
+    server: jp1-r.link-t7.com
+    port: 10031
+    uuid: EF3507AC-123A-4A39-9B4C-7D9BD69F8913
+    network: grpc
+    udp: true
+    tls: true
+    skip-cert-verify: true
+    client-fingerprint: chrome
+    servername: s0.awsstatic.com
+    reality-opts:
+      public-key: 'wOu-BMrXvk9KX23JZrlpUlF4SMjDcejm0vNECdhy5xE'
+      short-id: '686c0ef0'
+    grpc-opts:
+      grpc-service-name: 'update'
+
+  - name: "日本-2"
+    type: vless
+    server: jp2-r.link-t7.com
+    port: 10032
+    uuid: EF3507AC-123A-4A39-9B4C-7D9BD69F8913
+    network: grpc
+    udp: true
+    tls: true
+    skip-cert-verify: true
+    client-fingerprint: chrome
+    servername: s0.awsstatic.com
+    reality-opts:
+      public-key: 'wOu-BMrXvk9KX23JZrlpUlF4SMjDcejm0vNECdhy5xE'
+      short-id: '686c0ef0'
+    grpc-opts:
+      grpc-service-name: 'update'
+
+  - name: "香港-1"
+    type: vless
+    server: hk1-r.link-t7.com
+    port: 10126
+    uuid: EF3507AC-123A-4A39-9B4C-7D9BD69F8913
+    network: grpc
+    udp: true
+    tls: true
+    skip-cert-verify: true
+    client-fingerprint: chrome
+    servername: s0.awsstatic.com
+    reality-opts:
+      public-key: 'wOu-BMrXvk9KX23JZrlpUlF4SMjDcejm0vNECdhy5xE'
+      short-id: '686c0ef0'
+    grpc-opts:
+      grpc-service-name: 'update'
+
+  - name: "香港-2"
+    type: vless
+    server: hk2-r.link-t7.com
+    port: 10127
+    uuid: EF3507AC-123A-4A39-9B4C-7D9BD69F8913
+    network: grpc
+    udp: true
+    tls: true
+    skip-cert-verify: true
+    client-fingerprint: chrome
+    servername: s0.awsstatic.com
+    reality-opts:
+      public-key: 'wOu-BMrXvk9KX23JZrlpUlF4SMjDcejm0vNECdhy5xE'
+      short-id: '686c0ef0'
+    grpc-opts:
+      grpc-service-name: 'update'
+
+  - name: "香港-3"
+    type: vless
+    server: hk3-r.link-t7.com
+    port: 10128
+    uuid: EF3507AC-123A-4A39-9B4C-7D9BD69F8913
+    network: grpc
+    udp: true
+    tls: true
+    skip-cert-verify: true
+    client-fingerprint: chrome
+    servername: s0.awsstatic.com
+    reality-opts:
+      public-key: 'wOu-BMrXvk9KX23JZrlpUlF4SMjDcejm0vNECdhy5xE'
+      short-id: '686c0ef0'
+    grpc-opts:
+      grpc-service-name: 'movie'
+
+  - name: "香港-4"
+    type: vless
+    server: hk4-r.link-t7.com
+    port: 10129
+    uuid: EF3507AC-123A-4A39-9B4C-7D9BD69F8913
+    network: grpc
+    udp: true
+    tls: true
+    skip-cert-verify: true
+    client-fingerprint: chrome
+    servername: s0.awsstatic.com
+    reality-opts:
+      public-key: 'wOu-BMrXvk9KX23JZrlpUlF4SMjDcejm0vNECdhy5xE'
+      short-id: '686c0ef0'
+    grpc-opts:
+      grpc-service-name: 'movie'
 
   - name: "🇯🇵日本01 直连专线"
     type: vless
     server: 38.180.201.172
     port: 8443
     uuid: 10c10faf-375a-4fe8-9403-613641a87c4f
-    tls: true
     network: ws
-    servername: ty986gfazs.cainiaohub.xyz
+    udp: true
+    tls: true
     skip-cert-verify: true
+    client-fingerprint: chrome
+    servername: ty986gfazs.cainiaohub.xyz
     ws-opts:
-      path: /81574b6b-c9d7-44a0-b83d-dad56e8cb530
+      path: '/81574b6b-c9d7-44a0-b83d-dad56e8cb530'
       headers:
-        Host: ty986gfazs.cainiaohub.xyz
+        Host: 'ty986gfazs.cainiaohub.xyz'
 
   - name: "🇯🇵日本02 直连专线"
     type: vless
     server: 38.180.201.172
     port: 8443
     uuid: 10c10faf-375a-4fe8-9403-613641a87c4f
-    tls: true
     network: ws
-    servername: ty986gfazs.cainiaohub.xyz
+    udp: true
+    tls: true
     skip-cert-verify: true
+    client-fingerprint: chrome
+    servername: ty986gfazs.cainiaohub.xyz
     ws-opts:
-      path: /81574b6b-c9d7-44a0-b83d-dad56e8cb530
+      path: '/81574b6b-c9d7-44a0-b83d-dad56e8cb530'
       headers:
-        Host: ty986gfazs.cainiaohub.xyz
+        Host: 'ty986gfazs.cainiaohub.xyz'
 
   - name: "🇺🇸美国01 直连专线"
     type: vless
     server: 38.180.193.242
     port: 30545
     uuid: 10c10faf-375a-4fe8-9403-613641a87c4f
-    tls: true
     network: ws
-    servername: ty986gfazs.cainiaohub.xyz
+    udp: true
+    tls: true
     skip-cert-verify: true
+    client-fingerprint: chrome
+    servername: ty986gfazs.cainiaohub.xyz
     ws-opts:
-      path: /81574b6b-c9d7-44a0-b83d-dad56e8cb530
+      path: '/81574b6b-c9d7-44a0-b83d-dad56e8cb530'
       headers:
-        Host: ty986gfazs.cainiaohub.xyz
+        Host: 'ty986gfazs.cainiaohub.xyz'
 
   - name: "🇸🇬新加坡01 千兆专线"
     type: vless
     server: 38.180.249.80
     port: 443
     uuid: 10c10faf-375a-4fe8-9403-613641a87c4f
-    tls: true
     network: ws
+    udp: true
+    tls: true
+    skip-cert-verify: true
+    client-fingerprint: chrome
     servername: fd687hery.cainiaohub.xyz
-    skip-cert-verify: true
     ws-opts:
-      path: /81574b6b-c9d7-44a0-b83d-dad56e8cb529
+      path: '/81574b6b-c9d7-44a0-b83d-dad56e8cb529'
       headers:
-        Host: fd687hery.cainiaohub.xyz
+        Host: 'fd687hery.cainiaohub.xyz'
 
-  - name: "🇦🇺澳大利亚"
+  - name: "美国-1 1"
     type: vless
-    server: 103.148.73.119
-    port: 50012
-    uuid: 10c10faf-375a-4fe8-9403-613641a87c4f
+    server: 204.44.122.31
+    port: 61443
+    uuid: 78724185-bf8e-43d8-a70b-f1c0858ae222
+    network: grpc
+    udp: true
     tls: true
-    network: ws
-    servername: asd65fg41qe.cainiaohub.xyz
     skip-cert-verify: true
-    ws-opts:
-      path: /81574b6b-c9d7-44a0-b83d-dad56e8cb530
-      headers:
-        Host: asd65fg41qe.cainiaohub.xyz
+    client-fingerprint: qq
+    servername: www.python.org
+    reality-opts:
+      public-key: 'gxOaKg5G60tmqLEMXXaAxHQ1SaAydxunCHVfsRARVW8'
+      short-id: '316f0db151'
+    grpc-opts:
+      grpc-service-name: 'jss'
 
-  - name: "🇲🇲缅甸"
+  - name: "美国-2 1"
     type: vless
-    server: 103.148.73.119
-    port: 50013
-    uuid: 10c10faf-375a-4fe8-9403-613641a87c4f
-    tls: true
-    network: ws
-    servername: asd65fg41qe.cainiaohub.xyz
-    skip-cert-verify: true
-    ws-opts:
-      path: /81574b6b-c9d7-44a0-b83d-dad56e8cb530
-      headers:
-        Host: asd65fg41qe.cainiaohub.xyz
-
-  - name: "🇰🇭柬埔寨"
-    type: vless
-    server: 103.148.73.119
-    port: 50014
-    uuid: 10c10faf-375a-4fe8-9403-613641a87c4f
-    tls: true
-    network: ws
-    servername: asd65fg41qe.cainiaohub.xyz
-    skip-cert-verify: true
-    ws-opts:
-      path: /81574b6b-c9d7-44a0-b83d-dad56e8cb530
-      headers:
-        Host: asd65fg41qe.cainiaohub.xyz
-
-  - name: "🇵🇭菲律宾"
-    type: vless
-    server: 103.148.73.119
-    port: 50015
-    uuid: 10c10faf-375a-4fe8-9403-613641a87c4f
-    tls: true
-    network: ws
-    servername: asd65fg41qe.cainiaohub.xyz
-    skip-cert-verify: true
-    ws-opts:
-      path: /81574b6b-c9d7-44a0-b83d-dad56e8cb530
-      headers:
-        Host: asd65fg41qe.cainiaohub.xyz
-
-  - name: "🇲🇾马来西亚"
-    type: vless
-    server: 103.148.73.119
-    port: 50016
-    uuid: 10c10faf-375a-4fe8-9403-613641a87c4f
-    tls: true
-    network: ws
-    servername: asd65fg41qe.cainiaohub.xyz
-    skip-cert-verify: true
-    ws-opts:
-      path: /81574b6b-c9d7-44a0-b83d-dad56e8cb530
-      headers:
-        Host: asd65fg41qe.cainiaohub.xyz
-
-  - name: "🇩🇪德国"
-    type: vless
-    server: 103.148.73.119
-    port: 50017
-    uuid: 10c10faf-375a-4fe8-9403-613641a87c4f
-    tls: true
-    network: ws
-    servername: asd65fg41qe.cainiaohub.xyz
-    skip-cert-verify: true
-    ws-opts:
-      path: /81574b6b-c9d7-44a0-b83d-dad56e8cb530
-      headers:
-        Host: asd65fg41qe.cainiaohub.xyz
-
-  - name: "🇮🇩印度尼西亚"
-    type: vless
-    server: 103.148.73.119
-    port: 50018
-    uuid: 10c10faf-375a-4fe8-9403-613641a87c4f
-    tls: true
-    network: ws
-    servername: asd65fg41qe.cainiaohub.xyz
-    skip-cert-verify: true
-    ws-opts:
-      path: /81574b6b-c9d7-44a0-b83d-dad56e8cb530
-      headers:
-        Host: asd65fg41qe.cainiaohub.xyz
-
-  - name: "🇹🇷土耳其"
-    type: vless
-    server: 103.148.73.119
-    port: 50019
-    uuid: 10c10faf-375a-4fe8-9403-613641a87c4f
-    tls: true
-    network: ws
-    servername: asd65fg41qe.cainiaohub.xyz
-    skip-cert-verify: true
-    ws-opts:
-      path: /81574b6b-c9d7-44a0-b83d-dad56e8cb530
-      headers:
-        Host: asd65fg41qe.cainiaohub.xyz
-
-  - name: "🇳🇬尼日利亚"
-    type: vless
-    server: 103.148.73.119
-    port: 50020
-    uuid: 10c10faf-375a-4fe8-9403-613641a87c4f
-    tls: true
-    network: ws
-    servername: asd65fg41qe.cainiaohub.xyz
-    skip-cert-verify: true
-    ws-opts:
-      path: /81574b6b-c9d7-44a0-b83d-dad56e8cb530
-      headers:
-        Host: asd65fg41qe.cainiaohub.xyz
-
-  - name: "🇵🇰巴基斯坦"
-    type: vless
-    server: 103.148.73.119
-    port: 50021
-    uuid: 10c10faf-375a-4fe8-9403-613641a87c4f
-    tls: true
-    network: ws
-    servername: asd65fg41qe.cainiaohub.xyz
-    skip-cert-verify: true
-    ws-opts:
-      path: /81574b6b-c9d7-44a0-b83d-dad56e8cb530
-      headers:
-        Host: asd65fg41qe.cainiaohub.xyz
-
-  # ======= 免费节点（free） =======
-
-  - name: "🇺🇸美国01-免费"
-    type: vless
-    server: 38.180.192.156
+    server: 204.44.122.31
     port: 443
-    uuid: 10c10faf-375a-4fe8-9403-613641a87c4f
+    uuid: 78724185-bf8e-43d8-a70b-f1c0858ae222
+    network: grpc
+    udp: true
     tls: true
-    network: ws
-    servername: r8eerh.cainiaohub.xyz
     skip-cert-verify: true
-    ws-opts:
-      path: /81574b6b-c9d7-44a0-b83d-dad56e8cb529
-      headers:
-        Host: r8eerh.cainiaohub.xyz
+    client-fingerprint: ios
+    servername: www.python.org
+    reality-opts:
+      public-key: 'gxOaKg5G60tmqLEMXXaAxHQ1SaAydxunCHVfsRARVW8'
+      short-id: '316f0db151'
+    grpc-opts:
+      grpc-service-name: 'jss'
 
-  - name: "🇺🇸美国02-免费"
+  - name: "美国-3 1"
     type: vless
-    server: 38.180.192.156
-    port: 443
-    uuid: 10c10faf-375a-4fe8-9403-613641a87c4f
+    server: 45.144.174.72
+    port: 42150
+    uuid: 78724185-bf8e-43d8-a70b-f1c0858ae222
+    network: tcp
+    udp: true
     tls: true
-    network: ws
-    servername: r8eerh.cainiaohub.xyz
     skip-cert-verify: true
-    ws-opts:
-      path: /81574b6b-c9d7-44a0-b83d-dad56e8cb529
-      headers:
-        Host: r8eerh.cainiaohub.xyz
+    client-fingerprint: chrome
+    servername: www.python.org
+    reality-opts:
+      public-key: 'nSp1em9gbsG4VzJ2HUXZR8a515FmZ-Im05wTDJ06xXY'
+      short-id: '86cd4a57db'
+    flow: xtls-rprx-vision
 
-  - name: "🇯🇵日本02-免费"
+  - name: "美国-4"
     type: vless
-    server: 38.180.7.127
+    server: seattle.speedwarp.sbs
     port: 443
-    uuid: 10c10faf-375a-4fe8-9403-613641a87c4f
-    tls: true
+    uuid: 78724185-bf8e-43d8-a70b-f1c0858ae222
     network: ws
-    servername: erfdzxc.ewuernb.uk
+    udp: true
+    tls: true
     skip-cert-verify: true
+    client-fingerprint: chrome
+    servername: seattle.speedwarp.sbs
     ws-opts:
-      path: /81574b6b-c9d7-44a0-b83d-dad56e8cb529
-      headers:
-        Host: erfdzxc.ewuernb.uk
+      path: '/img'
 
-  - name: "🇯🇵日本01-免费"
-    type: vless
-    server: 38.180.7.127
-    port: 443
-    uuid: 10c10faf-375a-4fe8-9403-613641a87c4f
-    tls: true
-    network: ws
-    servername: erfdzxc.ewuernb.uk
-    skip-cert-verify: true
-    ws-opts:
-      path: /81574b6b-c9d7-44a0-b83d-dad56e8cb529
-      headers:
-        Host: erfdzxc.ewuernb.uk
 
-  - name: "🇸🇬新加坡02-免费"
-    type: vless
-    server: 38.180.106.175
-    port: 443
-    uuid: 10c10faf-375a-4fe8-9403-613641a87c4f
-    tls: true
-    network: ws
-    servername: ed45sg41sd6g.cainiaohub.xyz
-    skip-cert-verify: true
-    ws-opts:
-      path: /81574b6b-c9d7-44a0-b83d-dad56e8cb529
-      headers:
-        Host: ed45sg41sd6g.cainiaohub.xyz
 
 proxy-groups:
   - name: "🚀 会员节点"
     type: select
     proxies:
       - "🇨🇳台湾02 超快专线"
+      - "🇨🇳台湾01|高速|流媒体"
+      - "🇨🇳台湾02|高速|流媒体"
+      - "🇨🇳台湾03|高速|流媒体"
       - "🇨🇳台湾01 直连专线"
       - "🇭🇰香港01 中转专线"
       - "🇭🇰香港02 中转专线"
       - "🇭🇰香港03 超快专线"
+      - "美国-1"
+      - "美国-2"
+      - "美国-3"
+      - "日本-1"
+      - "日本-2"
+      - "香港-1"
+      - "香港-2"
+      - "香港-3"
+      - "香港-4"
       - "🇯🇵日本01 直连专线"
       - "🇯🇵日本02 直连专线"
       - "🇺🇸美国01 直连专线"
       - "🇸🇬新加坡01 千兆专线"
-      - "🇦🇺澳大利亚"
-      - "🇲🇲缅甸"
-      - "🇰🇭柬埔寨"
-      - "🇵🇭菲律宾"
-      - "🇲🇾马来西亚"
-      - "🇩🇪德国"
-      - "🇮🇩印度尼西亚"
-      - "🇹🇷土耳其"
-      - "🇳🇬尼日利亚"
-      - "🇵🇰巴基斯坦"
-
-  - name: "🎁 免费节点"
-    type: select
-    proxies:
-      - "🇺🇸美国01-免费"
-      - "🇺🇸美国02-免费"
-      - "🇯🇵日本02-免费"
-      - "🇯🇵日本01-免费"
-      - "🇸🇬新加坡02-免费"
+      - "美国-1 1"
+      - "美国-2 1"
+      - "美国-3 1"
+      - "美国-4"
 
   - name: "🌐 节点选择"
     type: select
     proxies:
       - "🚀 会员节点"
-      - "🎁 免费节点"
       - "DIRECT"
 
 rules:
+  - DOMAIN-SUFFIX,local,DIRECT
+  - IP-CIDR,127.0.0.0/8,DIRECT,no-resolve
+  - IP-CIDR,192.168.0.0/16,DIRECT,no-resolve
+  - IP-CIDR,10.0.0.0/8,DIRECT,no-resolve
+  - IP-CIDR,172.16.0.0/12,DIRECT,no-resolve
+  - GEOSITE,cn,DIRECT
+  - GEOIP,cn,DIRECT
   - MATCH,🌐 节点选择
