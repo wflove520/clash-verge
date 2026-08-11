@@ -6,7 +6,7 @@ log-level: info
 ipv6: false
 
 proxies:
-  - name: "🇨🇳台湾01 直连专线"
+  - name: "🇨🇳台湾01 gpt专用"
     type: vless
     server: 60.248.219.52
     port: 443
@@ -22,7 +22,7 @@ proxies:
       headers:
         Host: 'ty986gfazs.cainiaohub.xyz'
 
-  - name: "🇨🇳台湾02 直连专线"
+  - name: "🇨🇳台湾02 gpt专用"
     type: vless
     server: 59.125.69.21
     port: 443
@@ -38,7 +38,7 @@ proxies:
       headers:
         Host: 'ty986gfazs.cainiaohub.xyz'
 
-  - name: "🇭🇰香港01 直连专线"
+  - name: "🇭🇰香港01 下载专用"
     type: vless
     server: 103.180.20.228
     port: 8443
@@ -54,7 +54,7 @@ proxies:
       headers:
         Host: 'ty986gfazs.cainiaohub.xyz'
 
-  - name: "🇭🇰香港02 直连专线"
+  - name: "🇭🇰香港02 下载专用"
     type: vless
     server: 103.148.73.176
     port: 8443
@@ -70,65 +70,275 @@ proxies:
       headers:
         Host: 'ty986gfazs.cainiaohub.xyz'
 
-  - name: "🇨🇳香港三网优化-01"
+  - name: "🇭🇰香港专线-01"
     type: vless
-    server: 207.174.133.222
-    port: 10000
-    uuid: 431fe973-a43a-4fac-bf83-2a772e0d0625
-    network: tcp
+    server: hk2-r.link-t7.com
+    port: 10127
+    uuid: CB9C296F-A571-4B73-961E-142D832F35D0
+    network: grpc
     udp: true
-    tls: false
+    tls: true
+    skip-cert-verify: true
+    client-fingerprint: chrome
+    servername: s0.awsstatic.com
+    reality-opts:
+      public-key: 'wOu-BMrXvk9KX23JZrlpUlF4SMjDcejm0vNECdhy5xE'
+      short-id: '686c0ef0'
+    grpc-opts:
+      grpc-service-name: 'update'
 
-  - name: "🇨🇳香港三网优化-02"
+  - name: "🇭🇰香港专线-02"
     type: vless
-    server: 207.174.133.222
-    port: 10000
-    uuid: 431fe973-a43a-4fac-bf83-2a772e0d0625
-    network: tcp
+    server: hk2-r.link-t7.com
+    port: 10127
+    uuid: CB9C296F-A571-4B73-961E-142D832F35D0
+    network: grpc
     udp: true
-    tls: false
+    tls: true
+    skip-cert-verify: true
+    client-fingerprint: chrome
+    servername: s0.awsstatic.com
+    reality-opts:
+      public-key: 'wOu-BMrXvk9KX23JZrlpUlF4SMjDcejm0vNECdhy5xE'
+      short-id: '686c0ef0'
+    grpc-opts:
+      grpc-service-name: 'update'
 
-  - name: "🇨🇳台湾专线-01"
+  - name: "🇭🇰香港专线-03"
     type: vless
-    server: 60.249.101.16
-    port: 10000
-    uuid: 431fe973-a43a-4fac-bf83-2a772e0d0625
-    network: tcp
+    server: hk5-r.link-t7.com
+    port: 10130
+    uuid: CB9C296F-A571-4B73-961E-142D832F35D0
+    network: grpc
     udp: true
-    tls: false
+    tls: true
+    skip-cert-verify: true
+    client-fingerprint: chrome
+    servername: s0.awsstatic.com
+    reality-opts:
+      public-key: 'wOu-BMrXvk9KX23JZrlpUlF4SMjDcejm0vNECdhy5xE'
+      short-id: '686c0ef0'
+    grpc-opts:
+      grpc-service-name: 'movie'
 
-  - name: "🇨🇳台湾专线-02"
+  - name: "🇭🇰香港专线-04"
     type: vless
-    server: 60.249.101.16
-    port: 10000
-    uuid: 431fe973-a43a-4fac-bf83-2a772e0d0625
-    network: tcp
+    server: hk5-r.link-t7.com
+    port: 10130
+    uuid: CB9C296F-A571-4B73-961E-142D832F35D0
+    network: grpc
     udp: true
-    tls: false
+    tls: true
+    skip-cert-verify: true
+    client-fingerprint: chrome
+    servername: s0.awsstatic.com
+    reality-opts:
+      public-key: 'wOu-BMrXvk9KX23JZrlpUlF4SMjDcejm0vNECdhy5xE'
+      short-id: '686c0ef0'
+    grpc-opts:
+      grpc-service-name: 'movie'
 
-  - name: "🇨🇳台湾专线-03"
+  - name: "🇭🇰香港中转-01"
     type: vless
-    server: 60.249.101.16
-    port: 10000
-    uuid: 431fe973-a43a-4fac-bf83-2a772e0d0625
-    network: tcp
+    server: xmm5.130209.xyz
+    port: 8443
+    uuid: 65c56e1f-5c41-40bc-b0b5-9346772476ca
+    network: ws
     udp: true
-    tls: false
+    tls: true
+    skip-cert-verify: true
+    client-fingerprint: edge
+    servername: hongkong.11459178.xyz
+    ws-opts:
+      path: '/cdn/packages/runtime-core.tar.gz'
+      headers:
+        Host: 'hongkong.11459178.xyz'
 
-  - name: "🇨🇳台湾专线-04"
+  - name: "🇭🇰香港中转-02"
     type: vless
-    server: 60.249.101.16
-    port: 10000
-    uuid: 431fe973-a43a-4fac-bf83-2a772e0d0625
-    network: tcp
+    server: xmm5.130209.xyz
+    port: 8443
+    uuid: 65c56e1f-5c41-40bc-b0b5-9346772476ca
+    network: ws
     udp: true
-    tls: false
+    tls: true
+    skip-cert-verify: true
+    client-fingerprint: edge
+    servername: hongkong.11459178.xyz
+    ws-opts:
+      path: '/cdn/packages/runtime-core.tar.gz'
+      headers:
+        Host: 'hongkong.11459178.xyz'
+
+  - name: "🇭🇰香港中转-03"
+    type: vless
+    server: cf.130209.xyz
+    port: 8443
+    uuid: 65c56e1f-5c41-40bc-b0b5-9346772476ca
+    network: ws
+    udp: true
+    tls: true
+    skip-cert-verify: true
+    client-fingerprint: edge
+    servername: hongkong.11459178.xyz
+    ws-opts:
+      path: '/cdn/packages/runtime-core.tar.gz'
+      headers:
+        Host: 'hongkong.11459178.xyz'
+
+  - name: "🇭🇰香港中转-04"
+    type: vless
+    server: cf.130209.xyz
+    port: 8443
+    uuid: 65c56e1f-5c41-40bc-b0b5-9346772476ca
+    network: ws
+    udp: true
+    tls: true
+    skip-cert-verify: true
+    client-fingerprint: edge
+    servername: hongkong.11459178.xyz
+    ws-opts:
+      path: '/cdn/packages/runtime-core.tar.gz'
+      headers:
+        Host: 'hongkong.11459178.xyz'
+
+  - name: "🇺🇸美国专线-01"
+    type: vless
+    server: us1-r.link-t7.com
+    port: 10238
+    uuid: CB9C296F-A571-4B73-961E-142D832F35D0
+    network: grpc
+    udp: true
+    tls: true
+    skip-cert-verify: true
+    client-fingerprint: chrome
+    servername: s0.awsstatic.com
+    reality-opts:
+      public-key: 'wOu-BMrXvk9KX23JZrlpUlF4SMjDcejm0vNECdhy5xE'
+      short-id: '686c0ef0'
+    grpc-opts:
+      grpc-service-name: 'movie'
+
+  - name: "🇺🇸美国专线-02"
+    type: vless
+    server: us1-r.link-t7.com
+    port: 10238
+    uuid: CB9C296F-A571-4B73-961E-142D832F35D0
+    network: grpc
+    udp: true
+    tls: true
+    skip-cert-verify: true
+    client-fingerprint: chrome
+    servername: s0.awsstatic.com
+    reality-opts:
+      public-key: 'wOu-BMrXvk9KX23JZrlpUlF4SMjDcejm0vNECdhy5xE'
+      short-id: '686c0ef0'
+    grpc-opts:
+      grpc-service-name: 'movie'
+
+  - name: "🇺🇸美国专线-03"
+    type: vless
+    server: us2-r.link-t7.com
+    port: 10239
+    uuid: CB9C296F-A571-4B73-961E-142D832F35D0
+    network: grpc
+    udp: true
+    tls: true
+    skip-cert-verify: true
+    client-fingerprint: chrome
+    servername: s0.awsstatic.com
+    reality-opts:
+      public-key: 'wOu-BMrXvk9KX23JZrlpUlF4SMjDcejm0vNECdhy5xE'
+      short-id: '686c0ef0'
+    grpc-opts:
+      grpc-service-name: 'movie'
+
+  - name: "🇺🇸美国专线-04"
+    type: vless
+    server: us2-r.link-t7.com
+    port: 10239
+    uuid: CB9C296F-A571-4B73-961E-142D832F35D0
+    network: grpc
+    udp: true
+    tls: true
+    skip-cert-verify: true
+    client-fingerprint: chrome
+    servername: s0.awsstatic.com
+    reality-opts:
+      public-key: 'wOu-BMrXvk9KX23JZrlpUlF4SMjDcejm0vNECdhy5xE'
+      short-id: '686c0ef0'
+    grpc-opts:
+      grpc-service-name: 'movie'
+
+  - name: "🇺🇸美国中转-01"
+    type: vless
+    server: www.wto.org
+    port: 2053
+    uuid: 65c56e1f-5c41-40bc-b0b5-9346772476ca
+    network: ws
+    udp: true
+    tls: true
+    skip-cert-verify: true
+    client-fingerprint: edge
+    servername: usa.105794.xyz
+    ws-opts:
+      path: '/download/v3/installer-x64.bin'
+      headers:
+        Host: 'usa.105794.xyz'
+
+  - name: "🇺🇸美国中转-02"
+    type: vless
+    server: www.wto.org
+    port: 2053
+    uuid: 65c56e1f-5c41-40bc-b0b5-9346772476ca
+    network: ws
+    udp: true
+    tls: true
+    skip-cert-verify: true
+    client-fingerprint: edge
+    servername: usa.105794.xyz
+    ws-opts:
+      path: '/download/v3/installer-x64.bin'
+      headers:
+        Host: 'usa.105794.xyz'
+
+  - name: "🇺🇸美国中转-03"
+    type: vless
+    server: www.wto.org
+    port: 2053
+    uuid: 65c56e1f-5c41-40bc-b0b5-9346772476ca
+    network: ws
+    udp: true
+    tls: true
+    skip-cert-verify: true
+    client-fingerprint: edge
+    servername: usa.105794.xyz
+    ws-opts:
+      path: '/download/v3/installer-x64.bin'
+      headers:
+        Host: 'usa.105794.xyz'
+
+  - name: "🇺🇸美国中转-04"
+    type: vless
+    server: www.wto.org
+    port: 2053
+    uuid: 65c56e1f-5c41-40bc-b0b5-9346772476ca
+    network: ws
+    udp: true
+    tls: true
+    skip-cert-verify: true
+    client-fingerprint: edge
+    servername: usa.105794.xyz
+    ws-opts:
+      path: '/download/v3/installer-x64.bin'
+      headers:
+        Host: 'usa.105794.xyz'
 
   - name: "🇯🇵日本专线-01"
     type: vless
-    server: jp5-r.link-t7.com
-    port: 10035
-    uuid: 6BA21C4F-87EA-43D9-B0C9-BCD40900DAF8
+    server: jp1-r.link-t7.com
+    port: 10031
+    uuid: CB9C296F-A571-4B73-961E-142D832F35D0
     network: grpc
     udp: true
     tls: true
@@ -143,9 +353,9 @@ proxies:
 
   - name: "🇯🇵日本专线-02"
     type: vless
-    server: jp4-r.link-t7.com
-    port: 10034
-    uuid: 6BA21C4F-87EA-43D9-B0C9-BCD40900DAF8
+    server: jp1-r.link-t7.com
+    port: 10031
+    uuid: CB9C296F-A571-4B73-961E-142D832F35D0
     network: grpc
     udp: true
     tls: true
@@ -162,7 +372,7 @@ proxies:
     type: vless
     server: jp3-r.link-t7.com
     port: 10033
-    uuid: 6BA21C4F-87EA-43D9-B0C9-BCD40900DAF8
+    uuid: CB9C296F-A571-4B73-961E-142D832F35D0
     network: grpc
     udp: true
     tls: true
@@ -179,7 +389,7 @@ proxies:
     type: vless
     server: jp3-r.link-t7.com
     port: 10033
-    uuid: 6BA21C4F-87EA-43D9-B0C9-BCD40900DAF8
+    uuid: CB9C296F-A571-4B73-961E-142D832F35D0
     network: grpc
     udp: true
     tls: true
@@ -192,115 +402,97 @@ proxies:
     grpc-opts:
       grpc-service-name: 'update'
 
-  - name: "🇯🇵日本三网优化-01"
+  - name: "🇯🇵日本中转-01"
     type: vless
-    server: 14.137.238.159
+    server: xmmcf.130209.xyz
+    port: 8443
+    uuid: 65c56e1f-5c41-40bc-b0b5-9346772476ca
+    network: ws
+    udp: true
+    tls: true
+    skip-cert-verify: true
+    client-fingerprint: edge
+    servername: japan.520785.xyz
+    ws-opts:
+      path: '/static/media/video-chunk.f4v'
+      headers:
+        Host: 'japan.520785.xyz'
+
+  - name: "🇯🇵日本中转-02"
+    type: vless
+    server: xmmcf.130209.xyz
+    port: 8443
+    uuid: 65c56e1f-5c41-40bc-b0b5-9346772476ca
+    network: ws
+    udp: true
+    tls: true
+    skip-cert-verify: true
+    client-fingerprint: edge
+    servername: japan.520785.xyz
+    ws-opts:
+      path: '/static/media/video-chunk.f4v'
+      headers:
+        Host: 'japan.520785.xyz'
+
+  - name: "🇯🇵日本中转-03"
+    type: vless
+    server: 14.137.238.155
     port: 10000
     uuid: 431fe973-a43a-4fac-bf83-2a772e0d0625
     network: tcp
     udp: true
     tls: false
 
-  - name: "🇯🇵日本三网优化-02"
+  - name: "🇯🇵日本中转-04"
     type: vless
-    server: 14.137.238.159
+    server: 14.137.238.155
     port: 10000
     uuid: 431fe973-a43a-4fac-bf83-2a772e0d0625
     network: tcp
     udp: true
     tls: false
 
-  - name: "🇺🇸美国专线-01"
+  - name: "🇨🇳台湾中转-01"
     type: vless
-    server: us2-r.link-t7.com
-    port: 10239
-    uuid: 6BA21C4F-87EA-43D9-B0C9-BCD40900DAF8
-    network: grpc
-    udp: true
-    tls: true
-    skip-cert-verify: true
-    client-fingerprint: chrome
-    servername: s0.awsstatic.com
-    reality-opts:
-      public-key: 'wOu-BMrXvk9KX23JZrlpUlF4SMjDcejm0vNECdhy5xE'
-      short-id: '686c0ef0'
-    grpc-opts:
-      grpc-service-name: 'movie'
-
-  - name: "🇺🇸美国专线-02"
-    type: vless
-    server: us2-r.link-t7.com
-    port: 10239
-    uuid: 6BA21C4F-87EA-43D9-B0C9-BCD40900DAF8
-    network: grpc
-    udp: true
-    tls: true
-    skip-cert-verify: true
-    client-fingerprint: chrome
-    servername: s0.awsstatic.com
-    reality-opts:
-      public-key: 'wOu-BMrXvk9KX23JZrlpUlF4SMjDcejm0vNECdhy5xE'
-      short-id: '686c0ef0'
-    grpc-opts:
-      grpc-service-name: 'movie'
-
-  - name: "🇺🇸美国专线-03"
-    type: vless
-    server: 180.178.60.252
+    server: 220.130.75.247
     port: 10000
     uuid: 431fe973-a43a-4fac-bf83-2a772e0d0625
     network: tcp
     udp: true
     tls: false
 
-  - name: "🇺🇸美国专线-04"
+  - name: "🇨🇳台湾中转-02"
     type: vless
-    server: 180.178.60.252
+    server: 220.130.75.247
     port: 10000
     uuid: 431fe973-a43a-4fac-bf83-2a772e0d0625
     network: tcp
     udp: true
     tls: false
 
-  - name: "🇺🇸美国专线-05"
+  - name: "🇨🇳台湾中转-03"
     type: vless
-    server: us2-r.link-t7.com
-    port: 10239
-    uuid: 6BA21C4F-87EA-43D9-B0C9-BCD40900DAF8
-    network: grpc
+    server: 220.130.75.247
+    port: 10000
+    uuid: 431fe973-a43a-4fac-bf83-2a772e0d0625
+    network: tcp
     udp: true
-    tls: true
-    skip-cert-verify: true
-    client-fingerprint: chrome
-    servername: s0.awsstatic.com
-    reality-opts:
-      public-key: 'wOu-BMrXvk9KX23JZrlpUlF4SMjDcejm0vNECdhy5xE'
-      short-id: '686c0ef0'
-    grpc-opts:
-      grpc-service-name: 'movie'
+    tls: false
 
-  - name: "🇺🇸美国专线-06"
+  - name: "🇨🇳台湾中转-04"
     type: vless
-    server: us2-r.link-t7.com
-    port: 10239
-    uuid: 6BA21C4F-87EA-43D9-B0C9-BCD40900DAF8
-    network: grpc
+    server: 220.130.75.247
+    port: 10000
+    uuid: 431fe973-a43a-4fac-bf83-2a772e0d0625
+    network: tcp
     udp: true
-    tls: true
-    skip-cert-verify: true
-    client-fingerprint: chrome
-    servername: s0.awsstatic.com
-    reality-opts:
-      public-key: 'wOu-BMrXvk9KX23JZrlpUlF4SMjDcejm0vNECdhy5xE'
-      short-id: '686c0ef0'
-    grpc-opts:
-      grpc-service-name: 'movie'
+    tls: false
 
   - name: "🇸🇬新加坡专线-01"
     type: vless
     server: sg1-r.link-t7.com
     port: 10036
-    uuid: 6BA21C4F-87EA-43D9-B0C9-BCD40900DAF8
+    uuid: CB9C296F-A571-4B73-961E-142D832F35D0
     network: grpc
     udp: true
     tls: true
@@ -317,7 +509,7 @@ proxies:
     type: vless
     server: sg4-r.link-t7.com
     port: 10039
-    uuid: 6BA21C4F-87EA-43D9-B0C9-BCD40900DAF8
+    uuid: CB9C296F-A571-4B73-961E-142D832F35D0
     network: grpc
     udp: true
     tls: true
@@ -334,7 +526,7 @@ proxies:
     type: vless
     server: sg4-r.link-t7.com
     port: 10039
-    uuid: 6BA21C4F-87EA-43D9-B0C9-BCD40900DAF8
+    uuid: CB9C296F-A571-4B73-961E-142D832F35D0
     network: grpc
     udp: true
     tls: true
@@ -347,71 +539,47 @@ proxies:
     grpc-opts:
       grpc-service-name: 'update'
 
-  - name: "🇸🇬新加坡直连-01 千兆专线"
-    type: vless
-    server: 38.180.249.80
-    port: 443
-    uuid: 10c10faf-375a-4fe8-9403-613641a87c4f
-    network: ws
-    udp: true
-    tls: true
-    skip-cert-verify: true
-    client-fingerprint: chrome
-    servername: fd687hery.cainiaohub.xyz
-    ws-opts:
-      path: '/81574b6b-c9d7-44a0-b83d-dad56e8cb529'
-      headers:
-        Host: 'fd687hery.cainiaohub.xyz'
-
-  - name: "🇸🇬新加坡直连-02 千兆专线"
-    type: vless
-    server: 38.180.249.80
-    port: 443
-    uuid: 10c10faf-375a-4fe8-9403-613641a87c4f
-    network: ws
-    udp: true
-    tls: true
-    skip-cert-verify: true
-    client-fingerprint: chrome
-    servername: fd687hery.cainiaohub.xyz
-    ws-opts:
-      path: '/81574b6b-c9d7-44a0-b83d-dad56e8cb529'
-      headers:
-        Host: 'fd687hery.cainiaohub.xyz'
-
 
 
 proxy-groups:
   - name: "🚀 会员节点"
     type: select
     proxies:
-      - "🇨🇳台湾01 直连专线"
-      - "🇨🇳台湾02 直连专线"
-      - "🇭🇰香港01 直连专线"
-      - "🇭🇰香港02 直连专线"
-      - "🇨🇳香港三网优化-01"
-      - "🇨🇳香港三网优化-02"
-      - "🇨🇳台湾专线-01"
-      - "🇨🇳台湾专线-02"
-      - "🇨🇳台湾专线-03"
-      - "🇨🇳台湾专线-04"
-      - "🇯🇵日本专线-01"
-      - "🇯🇵日本专线-02"
-      - "🇯🇵日本专线-03"
-      - "🇯🇵日本专线-04"
-      - "🇯🇵日本三网优化-01"
-      - "🇯🇵日本三网优化-02"
+      - "🇨🇳台湾01 gpt专用"
+      - "🇨🇳台湾02 gpt专用"
+      - "🇭🇰香港01 下载专用"
+      - "🇭🇰香港02 下载专用"
+      - "🇭🇰香港专线-01"
+      - "🇭🇰香港专线-02"
+      - "🇭🇰香港专线-03"
+      - "🇭🇰香港专线-04"
+      - "🇭🇰香港中转-01"
+      - "🇭🇰香港中转-02"
+      - "🇭🇰香港中转-03"
+      - "🇭🇰香港中转-04"
       - "🇺🇸美国专线-01"
       - "🇺🇸美国专线-02"
       - "🇺🇸美国专线-03"
       - "🇺🇸美国专线-04"
-      - "🇺🇸美国专线-05"
-      - "🇺🇸美国专线-06"
+      - "🇺🇸美国中转-01"
+      - "🇺🇸美国中转-02"
+      - "🇺🇸美国中转-03"
+      - "🇺🇸美国中转-04"
+      - "🇯🇵日本专线-01"
+      - "🇯🇵日本专线-02"
+      - "🇯🇵日本专线-03"
+      - "🇯🇵日本专线-04"
+      - "🇯🇵日本中转-01"
+      - "🇯🇵日本中转-02"
+      - "🇯🇵日本中转-03"
+      - "🇯🇵日本中转-04"
+      - "🇨🇳台湾中转-01"
+      - "🇨🇳台湾中转-02"
+      - "🇨🇳台湾中转-03"
+      - "🇨🇳台湾中转-04"
       - "🇸🇬新加坡专线-01"
       - "🇸🇬新加坡专线-02"
       - "🇸🇬新加坡专线-03"
-      - "🇸🇬新加坡直连-01 千兆专线"
-      - "🇸🇬新加坡直连-02 千兆专线"
 
   - name: "🌐 节点选择"
     type: select
